@@ -1,14 +1,9 @@
 <template>
   <div id="app">
-
-    <SignInPage v-if="!logedIn"/>
     <!--Top nav-->
-    <div class="appBody" v-if="logedIn">
-       
-       
+    <div class="appBody">
       <router-view @item-to-parent="addtoBasket" :items="items"/>
     </div>
-
   </div>
 </template>
 
@@ -40,13 +35,18 @@ export default {
 <style>
 @import url('@/assets/fontawesome/css/all.min.css');
 
+:root {
+    --card-background: #ffff;
+    --main-background: #efefef;
+}
+
 * {
   margin: auto;
   padding: 0;
 }
 
 body, html {
-  background: snow;
+  background: #efefef;
   scroll-behavior: smooth;
 }
 
